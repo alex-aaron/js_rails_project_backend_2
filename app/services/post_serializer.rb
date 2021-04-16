@@ -6,7 +6,7 @@ class PostSerializer
 
     def to_serialized_json
         @post.to_json(:include => {
-            :comments => {:only => [:post_id, :content, :created_at]}
+            :comments => {:only => [:id, :post_id, :content, :created_at]}
           })
     end
 end
